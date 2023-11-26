@@ -1,0 +1,293 @@
+body {
+    font-family: 'Anton', sans-serif;
+    font-size: 15px;
+    background-color: whitesmoke;
+    font-style: normal; 
+    line-height: 25px;
+    margin:0;
+    text-transform: uppercase;
+    height: 1700px;
+}
+
+@media (max-width:600px){
+    body{
+        height: 1500px;
+    }
+}
+
+header{
+    height: 275px;
+    background-image: url(https://images.unsplash.com/photo-1508444845599-5c89863b1c44?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8ZHJvbmV8ZW58MHx8MHx8&w=1000&q=80);
+    display: flex; 
+    background-size:cover;
+    background-position: center;
+    justify-content: center;  
+    align-items: center; 
+    position: relative;
+    z-index: -1;
+    z-index: -1;
+}
+
+@media (max-width:600px){
+    header{
+        height: 200px;
+        line-height: 1.2;
+    }
+}
+
+header h1 {
+    color: turquoise;
+    letter-spacing: 5px; 
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-size: 150px;
+    font-weight: normal;
+    z-index: 1;
+    width: 950px;
+    line-height: 150px;
+    text-align: center;
+    animation: wave 10s ease-in-out infinite, cambia_colore 10s infinite;
+
+}
+
+@media (max-width:600px){
+    header h1{
+        line-height: 50px;
+        font-size: 3em;
+        letter-spacing: 8px;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+        animation: none;
+    }
+}
+
+@keyframes wave {
+ 
+    25% {
+      transform: translateX(25%);
+    }
+    75% {
+      transform: translateX(-25%);
+}
+}
+
+@keyframes cambia_colore {
+    0% {
+      color: turquoise; /* il colore del testo all'inizio dell'animazione */
+    }
+    25%{
+        color: rgb(81, 217, 255);
+    }
+    50% {
+      color: rgb(73, 170, 255); /* dopo la metà dell'animazione il colore diventa blu */
+    }
+    75%{
+        color: rgb(81, 255, 255);
+    }
+    100% {
+      color: turquoise; /* alla fine dell'animazione il colore diventa verde */
+    }
+  }
+
+.Titolo {
+    background-color: white;
+    animation: cambia_colore 4s infinite;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    letter-spacing: 3px;
+    font-size: 100px;
+    font-weight: normal;
+    line-height: 150px;
+    text-align: center;
+    cursor: default;
+}
+
+
+
+@media (max-width:600px){
+    .titolo{
+        line-height: 50px;
+        font-size: 2em;
+        letter-spacing: 8px;
+        text-shadow: none;
+    }
+}
+
+
+#overlay {
+    position: absolute;
+    top:0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.3); 
+}
+
+main{
+    height: 50%;
+    padding-left: 180px;
+    padding-right: 180px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: gainsboro;
+    margin: 100px;
+    border-radius: 7px;
+}
+
+@media (max-width:600px){
+    main{
+        height: 70%;
+        padding-left: 0%;
+        padding-right: 0%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        margin: 0%;
+    }
+}
+
+.subscribe{
+    height: 100%;
+}
+
+label{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0 5px 0;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    letter-spacing: 3px;
+    font-size: 30px;
+    margin-top: 60px;
+    margin-right: 60px;
+    margin-left: 60px;
+    margin-bottom: 10px;
+    line-height: 40px;
+}
+
+@media (max-width:600px){
+    label{
+        font-size: 20px;
+        margin-top: 60px;
+        margin-bottom: 10px;
+        line-height: 50px;
+    }
+}
+
+form{
+    height: 85%;
+}
+
+input{
+    height: 30px;
+    width: 200px;
+    font-size: 20px;
+}
+
+@media (max-width:600px){
+    input{
+        height: 20px;
+        width: 160px;
+        font-size: 15px;
+    }
+}
+
+select{
+    height: 30px;
+    width: 200px;
+    font-size: 20px;
+}
+
+.error{
+    position: absolute;
+    color: red;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    right: 23%;
+    letter-spacing: 2px;
+}
+
+@media (max-width:600px){
+    .error,.okay{
+        right: 10%;
+    }
+}
+
+.okay{
+    position: absolute;
+    color: lime;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    right: 23%;
+    letter-spacing: 2px;
+}
+
+#submit{
+    display: flex;
+    margin-top: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 7px;
+    background-color: white;
+}
+
+#submit:hover{
+    background-color: black;
+    color: white;
+}
+
+
+.errore{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    font-size: 30px;
+    letter-spacing: 2px;
+    color:red;
+    margin-bottom: 30px;
+}
+
+@media (max-width:600px){
+    .errore{
+        font-size: 13px;
+    }
+}
+
+.login{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    font-size: 30px;
+    letter-spacing: 2px;
+    cursor: default;
+}
+
+@media (max-width:600px){
+   .login{
+    font-size: 20px;
+    margin-bottom: 200px;
+    }
+}
+
+
+a{
+    animation: cambia_colore 4s infinite;
+    margin-left: 10px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    text-decoration: none;
+}
+
+footer{
+    display: flex;
+    height: 50px;
+    background-color: turquoise;
+    color: black;
+    letter-spacing: 5px; 
+    text-align: center;
+    border-width: 5px;
+    justify-content: center;
+    cursor: default;
+}
+
+.hidden{
+    display: none;
+}

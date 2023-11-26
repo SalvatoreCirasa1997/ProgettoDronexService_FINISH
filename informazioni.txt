@@ -1,0 +1,28 @@
+apertura DB
+
+cd/
+cd xampp
+cd mysql
+cd bin
+mysql -u root
+use DronexService; 
+
+
+
+autoload:
+
+cd/
+cd xampp
+cd htdocs
+cd DronexService
+composer dump-autoload
+
+
+PASSAGGI DA SEGUIRE:
+1)INSERIRE LA CARTELLA DRONEX_SERVICE ALL'INTERNO DELLA CARTELLA XAMPP HTDOCS FOLDER
+
+2) COPIARE TUTTO IL CONTENUTO ALL'INTERNO DEL FILE DB.sql ED INCOLLARLO NEL PROMPT DEI COMANDI
+
+3) INCOLLARE IL SEGUENTE URL SUL BROWSER DOPO AVER AVVIATO XAMPP (APACHE ED MYSQL)
+http://localhost/DRONEX_SERVICE/HOME
+

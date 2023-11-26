@@ -1,0 +1,329 @@
+body {
+    font-family: 'Anton', sans-serif;
+    font-size: 15px;
+    background-color: whitesmoke;
+    font-style: normal; 
+    line-height: 25px;
+    margin:0;
+    text-transform: uppercase;
+}
+
+nav {
+    height: 70px;  
+    display: flex;
+    background-image: linear-gradient(to right, turquoise, rgb(114, 255, 253), rgb(207, 249, 255), rgb(228, 254, 255), turquoise); /* definisce lo stile di sfumatura */
+    background-size: 1000% auto; /* definisce la dimensione dell'immagine di sfondo */
+    animation: sfuma 10s ease infinite; /* definisce i parametri dell'animazione */
+    align-items: center;
+    justify-content: space-around;
+    border: white solid;
+    border-width: 5px;
+ 
+}
+
+.nav_a {
+    color: black;
+    padding: 3px 10px;
+    border-radius: 30px;
+    font-size: 22px;
+    cursor: pointer;
+    text-decoration:none;
+    letter-spacing: 2px; 
+}
+
+.nav_a:hover{
+    animation: cambia_colore2 4s infinite;
+}
+
+#utente {
+    color: black;
+    font-size: 30px;
+    cursor: default;
+    letter-spacing: 4px;
+    animation: cambia_colore3 4s infinite;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+@media (max-width:600px){
+    #utente{
+        font-size: 20px;
+    }
+}
+
+@keyframes cambia_colore2 {
+    0% {
+      color: black; /* il colore del testo all'inizio dell'animazione */
+    }
+    25%{
+        color: rgb(5, 0, 81);
+    }
+    50% {
+      color: rgb(18, 0, 133); /* dopo la metà dell'animazione il colore diventa blu */
+    }
+    75%{
+        color: rgb(0, 3, 155);
+    }
+    100% {
+      color: rgb(0, 3, 158); /* alla fine dell'animazione il colore diventa verde */
+    }
+  }
+
+  @keyframes cambia_colore3 {
+    0% {
+      color: rgb(255, 255, 255); /* il colore del testo all'inizio dell'animazione */
+    }
+    25%{
+        color: rgb(0, 153, 255);
+    }
+    50% {
+      color: rgb(34, 0, 255); /* dopo la metà dell'animazione il colore diventa blu */
+    }
+    75%{
+        color: rgb(132, 134, 255);
+    }
+    100% {
+      color: rgb(206, 207, 255); /* alla fine dell'animazione il colore diventa verde */
+    }
+  }
+
+header{
+    height: 275px;
+    background-image: url(https://images.unsplash.com/photo-1508444845599-5c89863b1c44?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8ZHJvbmV8ZW58MHx8MHx8&w=1000&q=80);
+    display: flex; 
+    background-size:cover;
+    background-position: center;
+    justify-content: center;  
+    align-items: center; 
+    position: relative;
+    z-index: -1;
+}
+
+@media (max-width:600px){
+    header{
+        height: 200px;
+        line-height: 1.2;
+    }
+}
+
+header h1 {
+    color: turquoise;
+    letter-spacing: 5px; 
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-size: 150px;
+    font-weight: normal;
+    z-index: 1;
+    width: 950px;
+    line-height: 150px;
+    text-align: center;
+    animation: wave 10s ease-in-out infinite, cambia_colore 10s infinite;
+}
+
+@keyframes wave {
+ 
+    25% {
+      transform: translateX(25%);
+    }
+    75% {
+      transform: translateX(-25%);
+}
+}
+
+@media (max-width:600px){
+    header h1{
+        line-height: 50px;
+        font-size: 3em;
+        letter-spacing: 8px;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    }
+}
+
+@keyframes cambia_colore {
+    0% {
+      color: turquoise; /* il colore del testo all'inizio dell'animazione */
+    }
+    25%{
+        color: rgb(81, 217, 255);
+    }
+    50% {
+      color: rgb(73, 170, 255); /* dopo la metà dell'animazione il colore diventa blu */
+    }
+    75%{
+        color: rgb(81, 255, 255);
+    }
+    100% {
+      color: turquoise; /* alla fine dell'animazione il colore diventa verde */
+    }
+  }
+
+
+#overlay {
+    position: absolute;
+    top:0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.3); 
+}
+
+.panel-title{
+    text-align: center;
+    font-size: 70px;
+    letter-spacing: 3px;
+    width: 100%;
+    height: 50px;
+    color: black
+}
+
+@media (max-width:600px){
+  .panel-title{
+     font-size: 25px;
+  }
+}
+
+#griglia {
+    display: flex;
+    height: 1420px;
+    border: 5px white solid;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border-radius: 10px;
+    background-color: rgb(228, 228, 228);
+}
+
+@media(max-width:600px){
+    #griglia{
+        height: 5000px;;
+    }
+}
+
+@media (min-height:1080px){
+    #griglia{
+        height: 1600px;
+    }
+  }
+
+.container {
+    margin-top: 30px;
+    height: 600px;
+    width: 400px;
+    background-color: rgb(180, 180, 180);
+    border: 3px white solid;
+    text-align: center;
+    border-radius: 10px;
+}
+
+@media(max-width:600px){
+    .container{
+        height: 650px;
+        width: 350px;
+    }
+}
+
+@media (min-height:1080px){
+    .container{
+        height: 700px;
+        width: 500px;
+    }
+  }
+
+.sfondo {
+    height: 230px;
+    width: 100%;
+}
+
+@media(max-width:600px){
+    .sfondo{
+        height: 35%;
+        border-radius: 6px;
+    }
+}
+
+@media (min-height:1080px){
+    .sfondo{
+        height: 300px;
+    }
+  }
+
+.Titolo{
+    animation: cambia_colore 4s infinite;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    letter-spacing: 3px;
+    font-size: 30px;
+    cursor: default;
+}
+
+@keyframes cambia_colore {
+    0% {
+      color: turquoise; /* il colore del testo all'inizio dell'animazione */
+    }
+    25%{
+        color: rgb(81, 217, 255);
+    }
+    50% {
+      color: rgb(73, 170, 255); /* dopo la metà dell'animazione il colore diventa blu */
+    }
+    75%{
+        color: rgb(81, 255, 255);
+    }
+    100% {
+      color: turquoise; /* alla fine dell'animazione il colore diventa verde */
+    }
+  }
+
+@media(max-width:600px){
+    .titolo{
+        font-size: 25px;
+    }
+}
+
+.p_quantita{
+    font-size: 20px;
+    text-align:initial;
+    margin: 30px;
+    width: 90%;
+
+}
+
+.p_quantita:hover{
+    cursor: default;
+}
+
+@media (max-width:600px){
+    .p_quantita{
+        font-size: 15px;
+    }
+}
+
+.button1 , .button2{
+    font-size: 17px;
+    margin: 10px;
+    width: 170px;
+    border-radius: 4px;
+    font-family: 'Anton', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.button2:hover{
+    cursor: pointer;
+    background-color: turquoise;
+}
+
+.button1:hover{
+    cursor: pointer;
+    background-color: turquoise;
+}
+
+
+footer{
+    display: flex;
+    height: 50px;
+    background-color: turquoise;
+    color: black;
+    letter-spacing: 5px; 
+    text-align: center;
+    border-width: 5px;
+    justify-content: center;
+    cursor: default;
+    margin-top: 100%;
+}
